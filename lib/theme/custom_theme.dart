@@ -8,7 +8,7 @@ class CustomTheme {
   static ThemeData get theme {
     return ThemeData(
       scaffoldBackgroundColor: Colors.white,
-      primaryColor: CustomColor.primaryColor,
+      primaryColor: CustomColor.primary600Color,
       canvasColor: Colors.transparent,
       appBarTheme: const AppBarTheme(
         elevation: 0,
@@ -16,7 +16,7 @@ class CustomTheme {
         iconTheme: IconThemeData(color: CustomColor.appBarIconColor),
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         titleTextStyle: TextStyle(
-          color: CustomColor.appBarTitleColor,
+          color: CustomColor.grey900Color,
           fontWeight: FontWeight.w500,
           fontSize: 22,
           height: 1.27,
@@ -25,7 +25,7 @@ class CustomTheme {
       textTheme: GoogleFonts.plusJakartaSansTextTheme(),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: CustomColor.primaryColor,
+          backgroundColor: CustomColor.primary600Color,
           textStyle: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w500,
