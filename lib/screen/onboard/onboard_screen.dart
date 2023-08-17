@@ -9,6 +9,8 @@ import 'onboard_tile.dart';
 import 'widget/skip_button.dart';
 
 class OnboardScreen extends StatefulWidget {
+  static const routeName = '/onboard';
+
   const OnboardScreen({super.key});
 
   @override

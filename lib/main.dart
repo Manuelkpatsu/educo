@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'router.dart';
 import 'screen/onboard/onboard_screen.dart';
 import 'theme/custom_theme.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: CustomTheme.theme,
-      home: const OnboardScreen(),
+      initialRoute: OnboardScreen.routeName,
+      onGenerateRoute: generateRoute,
     );
   }
 }
