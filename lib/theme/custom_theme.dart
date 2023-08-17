@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'custom_color.dart';
+import 'custom_text_style.dart';
 
 class CustomTheme {
   static ThemeData get theme {
@@ -23,6 +24,16 @@ class CustomTheme {
         ),
       ),
       textTheme: GoogleFonts.plusJakartaSansTextTheme(),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          elevation: 0,
+          foregroundColor: CustomColor.primary600Color,
+          textStyle: CustomTextStyle.textMedium,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(4)),
+          ),
+        ),
+      ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
           backgroundColor: CustomColor.primary600Color,
