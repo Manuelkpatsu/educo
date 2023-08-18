@@ -1,5 +1,6 @@
 import 'package:educo/model/onboard_data.dart';
 import 'package:educo/screen/auth/login/login_screen.dart';
+import 'package:educo/screen/auth/sign_up/sign_up_screen.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/custom_outline_button.dart';
 import 'package:educo/theme/custom_color.dart';
@@ -90,7 +91,10 @@ class _OnboardScreenState extends State<OnboardScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              CustomButton(onPressed: () {}, widget: const Text('Register')),
+              CustomButton(
+                onPressed: () => Navigator.of(context).pushReplacementNamed(SignUpScreen.routeName),
+                widget: const Text('Register'),
+              ),
               const SizedBox(height: 20),
               CustomOutlineButton(
                 onPressed: () => Navigator.of(context).pushReplacementNamed(LoginScreen.routeName),

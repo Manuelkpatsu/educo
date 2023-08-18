@@ -1,3 +1,4 @@
+import 'package:educo/screen/auth/sign_up/sign_up_screen.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/custom_icon_button.dart';
 import 'package:educo/screen/widget/custom_text_button.dart';
@@ -7,6 +8,9 @@ import 'package:educo/screen/widget/text_input_field.dart';
 import 'package:educo/screen/widget/welcome_text.dart';
 import 'package:educo/utils/validator.dart';
 import 'package:flutter/material.dart';
+
+import 'widget/forgot_password_button.dart';
+import 'widget/no_account_text.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/login';
@@ -35,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
           child: Form(
             key: _loginFormKey,
@@ -86,17 +90,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   inputAction: TextInputAction.done,
                   validator: Validator.password,
                 ),
-                const SizedBox(height: 60),
+                const SizedBox(height: 15),
+                ForgotPasswordButton(onTap: () {}),
+                const SizedBox(height: 50),
                 CustomButton(
                   onPressed: () {
                     if (_loginFormKey.currentState!.validate()) {}
                   },
                   widget: const Text('Log in'),
                 ),
+                const SizedBox(height: 30),
+                const NoAccountText(),
                 const SizedBox(height: 10),
                 CustomTextButton(
-                  onPressed: () {},
-                  action: 'Forgot password',
+                  onPressed: () => Navigator.of(context).pushNamed(SignUpScreen.routeName),
+                  action: 'Sign Up',
                 ),
                 const SizedBox(height: 20),
               ],
