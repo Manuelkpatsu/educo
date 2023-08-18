@@ -1,3 +1,4 @@
+import 'package:educo/screen/widget/custom_text_button.dart';
 import 'package:flutter/material.dart';
 
 class SkipButton extends StatelessWidget {
@@ -11,10 +12,12 @@ class SkipButton extends StatelessWidget {
     return isVisible
         ? Align(
             alignment: Alignment.centerRight,
-            child: TextButton(
+            child: CustomTextButton(
               onPressed: onPressed,
-              style: TextButton.styleFrom(minimumSize: const Size(78, 44)),
-              child: const Text('Skip'),
+              action: 'Skip',
+              width: 78,
+              height: 44,
+              borderRadius: 4,
             ),
           )
         : const SizedBox(height: 44);

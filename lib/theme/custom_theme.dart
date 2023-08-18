@@ -30,7 +30,7 @@ class CustomTheme {
           foregroundColor: CustomColor.primary600Color,
           textStyle: CustomTextStyle.textMedium,
           shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(4)),
+            borderRadius: BorderRadius.all(Radius.circular(6)),
           ),
         ),
       ),
@@ -47,6 +47,7 @@ class CustomTheme {
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(6)),
           ),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           minimumSize: const Size.fromHeight(60),
         ),
       ),

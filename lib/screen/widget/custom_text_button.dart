@@ -2,42 +2,39 @@ import 'package:educo/theme/custom_color.dart';
 import 'package:educo/theme/custom_text_style.dart';
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomTextButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final double? height;
   final double? width;
-  final Widget widget;
-  final double borderRadius;
   final Color foregroundColor;
-  final Color backgroundColor;
   final TextStyle textStyle;
+  final String action;
+  final double borderRadius;
 
-  const CustomButton({
-    Key? key,
+  const CustomTextButton({
+    super.key,
     required this.onPressed,
     this.height = 60,
     this.width = double.infinity,
-    required this.widget,
-    this.borderRadius = 6,
-    this.foregroundColor = Colors.white,
-    this.backgroundColor = CustomColor.primary600Color,
+    this.foregroundColor = CustomColor.primary600Color,
     this.textStyle = CustomTextStyle.textMedium,
-  }) : super(key: key);
+    required this.action,
+    this.borderRadius = 6,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return TextButton(
       onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
+      style: TextButton.styleFrom(
+        foregroundColor: foregroundColor,
+        textStyle: textStyle,
+        minimumSize: Size(width!, height!),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
         ),
-        textStyle: textStyle,
-        foregroundColor: foregroundColor,
-        backgroundColor: backgroundColor,
-        minimumSize: Size(width!, height!),
       ),
-      child: widget,
+      child: Text(action),
     );
   }
 }
