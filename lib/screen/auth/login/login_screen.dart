@@ -1,3 +1,4 @@
+import 'package:educo/screen/auth/forgot_password/forgot_password_screen.dart';
 import 'package:educo/screen/auth/sign_up/sign_up_screen.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/custom_icon_button.dart';
@@ -91,7 +92,9 @@ class _LoginScreenState extends State<LoginScreen> {
                   validator: Validator.password,
                 ),
                 const SizedBox(height: 15),
-                ForgotPasswordButton(onTap: () {}),
+                ForgotPasswordButton(
+                  onTap: () => Navigator.of(context).pushNamed(ForgotPasswordScreen.routeName),
+                ),
                 const SizedBox(height: 50),
                 CustomButton(
                   onPressed: () {

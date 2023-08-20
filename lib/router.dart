@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screen/auth/forgot_password/forgot_password_screen.dart';
 import 'screen/auth/login/login_screen.dart';
 import 'screen/auth/sign_up/sign_up_screen.dart';
 import 'screen/auth/sign_up_form/sign_up_form_screen.dart';
@@ -15,6 +16,8 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => const SignUpScreen());
     case SignUpFormScreen.routeName:
       return MaterialPageRoute(builder: (_) => const SignUpFormScreen());
+    case ForgotPasswordScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const ForgotPasswordScreen());
     default:
       return MaterialPageRoute(
         builder: (_) => Scaffold(
