@@ -1,3 +1,4 @@
+import 'package:educo/screen/auth/reset_password/reset_password_screen.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/custom_text_button.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,10 @@ class CheckEmailScreen extends StatelessWidget {
               const SizedBox(height: 60),
               const CheckEmailImage(),
               const SizedBox(height: 60),
-              CustomButton(onPressed: () {}, widget: const Text('Reset password')),
+              CustomButton(
+                onPressed: () => Navigator.of(context).pushNamed(ResetPasswordScreen.routeName),
+                widget: const Text('Reset password'),
+              ),
               const SizedBox(height: 10),
               CustomTextButton(
                 onPressed: () => Navigator.of(context).pop(),
