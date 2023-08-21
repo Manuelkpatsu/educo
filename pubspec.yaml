@@ -13,6 +13,8 @@ dependencies:
   smooth_page_indicator: ^1.1.0
   animated_splash_screen: ^1.3.0
   page_transition: ^2.0.9
+  salomon_bottom_bar: ^3.3.2
+  flutter_svg: ^2.0.7
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -32,6 +34,7 @@ flutter:
     - assets/images/lessons/
     - assets/images/projects/
     - assets/images/teachers/
+    - assets/images/navbar/
 
   # fonts:
   #   - family: Schyler

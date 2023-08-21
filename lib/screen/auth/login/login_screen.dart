@@ -1,5 +1,6 @@
 import 'package:educo/screen/auth/forgot_password/forgot_password_screen.dart';
 import 'package:educo/screen/auth/sign_up/sign_up_screen.dart';
+import 'package:educo/screen/main/app.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/custom_icon_button.dart';
 import 'package:educo/screen/widget/custom_text_button.dart';
@@ -98,7 +99,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 const SizedBox(height: 50),
                 CustomButton(
                   onPressed: () {
-                    if (_loginFormKey.currentState!.validate()) {}
+                    if (_loginFormKey.currentState!.validate()) {
+                      Navigator.of(context).pushNamedAndRemoveUntil(
+                        MainApp.routeName,
+                        (route) => false,
+                      );
+                    }
                   },
                   widget: const Text('Log in'),
                 ),

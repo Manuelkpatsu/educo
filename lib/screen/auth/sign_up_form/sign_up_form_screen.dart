@@ -1,3 +1,4 @@
+import 'package:educo/screen/main/app.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/password_input_field.dart';
 import 'package:educo/screen/widget/text_input_field.dart';
@@ -97,7 +98,12 @@ class _SignUpFormScreenState extends State<SignUpFormScreen> {
               const SizedBox(height: 100),
               CustomButton(
                 onPressed: () {
-                  if (_registerFormKey.currentState!.validate()) {}
+                  if (_registerFormKey.currentState!.validate()) {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      MainApp.routeName,
+                      (route) => false,
+                    );
+                  }
                 },
                 widget: const Text('Continue'),
               ),
