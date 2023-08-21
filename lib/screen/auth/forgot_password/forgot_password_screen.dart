@@ -1,3 +1,4 @@
+import 'package:educo/screen/auth/check_email/check_email_screen.dart';
 import 'package:educo/screen/widget/custom_button.dart';
 import 'package:educo/screen/widget/text_input_field.dart';
 import 'package:educo/utils/validator.dart';
@@ -48,9 +49,12 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               const SizedBox(height: 50),
               CustomButton(
                 onPressed: () {
-                  if (_forgotPasswordFormKey.currentState!.validate()) {}
+                  if (_forgotPasswordFormKey.currentState!.validate()) {
+                    Navigator.of(context).pushNamed(CheckEmailScreen.routeName);
+                    _forgotPasswordFormKey.currentState!.reset();
+                  }
                 },
-                widget: const Text('Send Email'),
+                widget: const Text('Send email'),
               ),
               const SizedBox(height: 20),
             ],
