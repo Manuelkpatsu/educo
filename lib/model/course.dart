@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 
+import 'course_type.dart';
 import 'lecturer.dart';
 
 class Course extends Equatable {
@@ -9,6 +10,8 @@ class Course extends Equatable {
   final Lecturer lecturer;
   final int totalEnrollment;
   final double rating;
+  final int totalRatings;
+  final CourseType courseType;
 
   const Course({
     required this.id,
@@ -17,8 +20,19 @@ class Course extends Equatable {
     required this.lecturer,
     required this.totalEnrollment,
     required this.rating,
+    required this.totalRatings,
+    required this.courseType,
   });
 
   @override
-  List<Object?> get props => [id, name, image, lecturer, totalEnrollment, rating];
+  List<Object?> get props => [
+        id,
+        name,
+        image,
+        lecturer,
+        totalEnrollment,
+        rating,
+        totalRatings,
+        courseType,
+      ];
 }
